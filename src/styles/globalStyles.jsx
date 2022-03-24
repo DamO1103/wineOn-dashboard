@@ -153,7 +153,6 @@ export const ToastStyledContainer = styled(ToastContainer)`
     }
   }
 `
-
 export const BodyContainer = styled.div`
   min-height: 100vh;
   height: auto;
@@ -168,6 +167,35 @@ export const BodyContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     min-height: 100vh;
   }
+`
+
+      
+export const TableContainer = styled.table`
+  border:1px solid black;
+  border-collapse:collapse;
+  width:100%;
+  color: #858796;
+  border-radius: 20px;
+`
+export const TdContainer = styled.td`
+  border:1px solid black;
+  padding:5px;
+  border-radius: 20px;
+`
+
+export const ThContainer = styled.th`
+border:1px solid black;
+padding:5px;
+border-radius: 20px;
+`
+export const TbodyContainer = styled.tbody`
+color: black;
+border-radius: 20px;
+`
+
+export const TheadContainer = styled.thead`
+color: black;
+border-radius: 20px;
 `
 
 export const MainSection = styled.main`

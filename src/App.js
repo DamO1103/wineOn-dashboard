@@ -1,42 +1,35 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import { GlobalProvider } from './services/context/GlobalContext'
-import Home from './pages/home'
+
+import Vinos from './pages/vinos'
 import Error from './pages/error'
-import Page1 from './pages/page1'
-import Page2 from './pages/page2'
-import { GlobalStyle, ToastStyledContainer, lightTheme, darkTheme } from './styles/globalStyles'
+import Usuarios from './pages/usuarios'
+import Home from './pages/home'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import { BodyContainer, GlobalStyle, lightTheme} from './styles/globalStyles'
+
 
 function App() {
   const [theme, setTheme] = useState()
 
-  useEffect(() => {
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')
-  }, [])
+ 
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
-      <GlobalProvider themeStyle={theme} setThemeStyle={setTheme}>
+      <BodyContainer className="BodyContainer" themeStyle={theme} setThemeStyle={setTheme}>
+      <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/usuarios" element={<Usuarios />} />
+          <Route path="/vinos" element={<Vinos />} />
           <Route path="*" element={<Error />} />
-          <Route path="/page1" element={<Page1 />} />
-          <Route path="/page2" element={<Page2 />} />
         </Routes>
-      </GlobalProvider>
-      <ToastStyledContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={true}
-        rtl={false}
-        pauseOnFocusLoss={true}
-        draggable={true}
-        pauseOnHover={true}
-      />
+        <Footer/>
+      </BodyContainer>
+      
     </ThemeProvider>
   )
 }

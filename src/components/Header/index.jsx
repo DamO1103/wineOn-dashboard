@@ -1,17 +1,14 @@
-import React, { /* useState, */ useContext } from 'react'
+import React, { /* useState, */ } from 'react'
 import { Link } from 'react-router-dom'
 import { IoHomeOutline, IoDocumentTextOutline } from 'react-icons/io5'
-import { GlobalContext } from '../../services/context/GlobalContext'
+
 
 import { HeaderSection, Title, ImageContainer } from './styles'
 
 const Header = () => {
-  const { themeStyle, setThemeStyle } = useContext(GlobalContext)
-  /* const [selected, setSelected] = useState(false) */
+  
 
-  const themeToggler = () => {
-    themeStyle === 'light' ? setThemeStyle('dark') : setThemeStyle('light')
-  }
+  
 
   return (
     <HeaderSection className="HeaderSection">
@@ -27,30 +24,24 @@ const Header = () => {
             <IoHomeOutline />
             <li>Home</li>
           </Link>
-          <Link to="/page1">
+          <Link to="/usuarios">
             <IoDocumentTextOutline />
-            <li>Page 1</li>
+            <li>Usuarios</li>
           </Link>
-          <Link to="/page2">
+          <Link to="/vinos">
             <IoDocumentTextOutline />
-            <li>Page 2</li>
+            <li>Vinos</li>
           </Link>
+          {/* <Link to="/page3">
+            <IoDocumentTextOutline />
+            <li>Page 3</li>
+          </Link> */}
         </ul>
       </ImageContainer>
 
       <Link to="/">
-        <Title>ReactJS Template</Title>
+        <Title>WineOn</Title>
       </Link>
-
-      <ImageContainer className="themeToogle" onClick={() => themeToggler()}>
-        <img
-          src="/icon/themeToogle.png"
-          alt="SearchIcon"
-          width="40"
-          height="40"
-          className="themeToogle"
-        />
-      </ImageContainer>
     </HeaderSection>
   )
 }
