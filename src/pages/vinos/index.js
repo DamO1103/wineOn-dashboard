@@ -20,18 +20,20 @@ const obtenerVinos =  async () => {
   console.log(data)
   console.log(productos)
   console.log(productos.wines)
-}
+  }
 
  
   return  (
+    
     <MainSection className="MainSection">
       {/* <PageContainer className="PageContainer"> */}
+      
         <Vino />
-        <h2>Todos los vinos</h2>
+         <h4>Todos los vinos</h4>
         
             <div>
               
-                  <TableContainer className='TableContainer'> 
+                  <TableContainer > 
                     <TheadContainer className= "TheadContainer">
                        <tr>
                           <ThContainer className='ThContainer'>Nombre</ThContainer>
@@ -56,6 +58,7 @@ const obtenerVinos =  async () => {
         
       
       {/* </PageContainer> */}
-    </MainSection>
+     </MainSection> 
+  
   )
 }

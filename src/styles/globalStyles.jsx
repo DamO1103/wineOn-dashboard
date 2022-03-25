@@ -201,17 +201,84 @@ border-radius: 20px;
 export const MainSection = styled.main`
   width: 100%;
   height: auto;
-  padding: 0 2rem;
+  padding: 0 6rem;
   padding-top: 100px;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: ${({ theme }) => theme.device.mobile}) {
-    padding: 0 1rem;
-    padding-top: 4.5rem;
-  }
+  
+`
+
+
+export const ContenedorVinoCategorias = styled.div`
+margin-top: 20px;
+margin-bottom: 90px;
+  width: 100%;
+  align-items: flex-start;
+  display:flex;
+  justify-content: space-between;
+  `
+
+export const Categorias = styled.div`
+display:flex;
+justify-content: space-between;
+padding: 5px;
+
+  width: 100%;
+
+`
+export const Cantidad = styled.div`
+display:flex;
+padding: 5px;
+
+  width: 100%;
+`
+
+export const CategoriasCantidad = styled.div`
+padding: 15px;
+margin: 30px;
+  width: 100%;
+  border: solid 1px rgb(180, 180, 180);
+  border-radius: 2px;
+`
+
+export const UltimoVino = styled.div`
+padding-right: 15px;
+padding-left: 15px;
+padding-top: 5px;
+padding-bottom: 5px;
+  width: 100%;
+  border: solid 1px rgb(180, 180, 180);
+  border-radius: 2px;
+`
+export const CatCantHijo = styled.h4`
+display: flex;
+align-items: center;
+background-color: #f3f3f3;
+margin: 0px;
+padding-right: 15px;
+padding-left: 15px;
+
+  width: 100%;
+  border: solid 1px rgb(180, 180, 180);
+  border-radius: 5px;
+`
+
+export const TotalIcono = styled.div`
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background-color: linear-gradient(-225deg,#8e9eab,#f2f2f2,#dbdbdb,#eaeaea);
+font-size: 25px;
+margin: 0px;
+padding-right: 15px;
+padding-left: 15px;
+
+  width: 100%;
+  border: solid 1px rgb(180, 180, 180);
+  border-radius: 5px;
 `
 
 export const PageContainer = styled.div`

@@ -6,7 +6,7 @@ export default function Home() {
     <MainSection className="MainSection">
       <Subtitle>hola</Subtitle>
       <PageContainer className="PageContainer">
-        <h1>Home</h1>
+      <img src="/img/not-found.gif" alt="Not found" />
       </PageContainer>
     </MainSection>
   )
